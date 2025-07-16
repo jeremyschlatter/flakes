@@ -5,6 +5,7 @@
         devShell = mkShell {
           packages = [
             rustup
+            zlib
           ];
         };
       }
