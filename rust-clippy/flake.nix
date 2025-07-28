@@ -1,18 +1,10 @@
 {
   outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-    }:
-    flake-utils.lib.eachDefaultSystem (
-      system: with nixpkgs.legacyPackages.${system}; {
-        devShell = mkShell {
-          packages = [
-            rustup
-            zlib
-          ];
-        };
-      }
-    );
+    { mkShell, nixpkgs, ... }:
+    mkShell nixpkgs (pkgs: {
+      packages = with pkgs; [
+        rustup
+        zlib
+      ];
+    });
 }

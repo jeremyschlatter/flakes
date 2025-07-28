@@ -13,17 +13,35 @@
         "type": "github"
       },
       "original": {
-        "id": "flake-utils",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "mkShell": {
+      "inputs": {
+        "flake-utils": "flake-utils"
+      },
+      "locked": {
+        "lastModified": 1753483126,
+        "narHash": "sha256-jj6HzEEmwo8w+fi15KCrimqO7qF8fRU9qLEzaZQpXhY=",
+        "owner": "jeremyschlatter",
+        "repo": "mkShell",
+        "rev": "c24dbba34ef4c6d0b67476506b6a5960df139513",
+        "type": "github"
+      },
+      "original": {
+        "id": "mkShell",
         "type": "indirect"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1751949589,
-        "narHash": "sha256-mgFxAPLWw0Kq+C8P3dRrZrOYEQXOtKuYVlo9xvPntt8=",
+        "lastModified": 1753151930,
+        "narHash": "sha256-XSQy6wRKHhRe//iVY5lS/ZpI/Jn6crWI8fQzl647wCg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9b008d60392981ad674e04016d25619281550a9d",
+        "rev": "83e677f31c84212343f4cc553bab85c2efcad60a",
         "type": "github"
       },
       "original": {
@@ -33,7 +51,7 @@
     },
     "root": {
       "inputs": {
-        "flake-utils": "flake-utils",
+        "mkShell": "mkShell",
         "nixpkgs": "nixpkgs"
       }
     },
