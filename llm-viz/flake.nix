@@ -12,7 +12,12 @@
     in {
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
-          odin
+          (odin.overrideAttrs (attrs: {
+            version = "dev-2023-08";
+            src = attrs.src.override {
+              hash = "";
+            };
+          }))
           yarn
         ];
       };
