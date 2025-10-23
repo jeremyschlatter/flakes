@@ -18,6 +18,12 @@
               hash = "sha256-pmgrauhB5/JWBkwrAm7tCml9IYQhXyGXsNVDKTntA0M=";
             };
             patches = [];
+            postPatch = ''
+              substituteInPlace src/build_settings.cpp \
+                --replace-fail "arm64-apple-macosx" "arm64-apple-darwin"
+
+              patchShebangs --build build_odin.sh
+            '';
           }))
           yarn
         ];
