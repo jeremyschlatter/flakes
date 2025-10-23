@@ -12,9 +12,9 @@
     in {
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
-          (odin.override {
+          ((odin.override {
             llvmPackages = llvmPackages_15;
-          }.overrideAttrs (attrs: {
+          }).overrideAttrs (attrs: {
             version = "dev-2023-08";
             src = attrs.src.override {
               hash = "sha256-pmgrauhB5/JWBkwrAm7tCml9IYQhXyGXsNVDKTntA0M=";
