@@ -17,6 +17,7 @@
             src = attrs.src.override {
               hash = "sha256-pmgrauhB5/JWBkwrAm7tCml9IYQhXyGXsNVDKTntA0M=";
             };
+            patches = [];
           }))
           yarn
         ];
