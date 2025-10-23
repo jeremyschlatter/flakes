@@ -1,7 +1,8 @@
 {
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
-    nixpkgs-old.url = github:NixOS/nixpkgs/release-24.05;
+    nixpkgs-old.url = github:NixOS/nixpkgs/38e5815;
+    # nixpkgs-old.url = github:NixOS/nixpkgs/release-24.05;
     flake-utils.url = github:numtide/flake-utils;
   };
 
@@ -14,8 +15,8 @@
     in {
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
-          old.x86_64-darwin.odin
-          # old.${system}.odin
+          # old.x86_64-darwin.odin
+          old.${system}.odin
 
 #           ((odin.override {
 #             llvmPackages = llvmPackages_17;
