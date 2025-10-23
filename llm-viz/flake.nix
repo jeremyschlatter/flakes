@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
-    nixpkgs-old.url = github:NixOS/nixpkgs/release-22.11;
+    nixpkgs-old.url = github:NixOS/nixpkgs/release-22.05;
     flake-utils.url = github:numtide/flake-utils;
   };
 
