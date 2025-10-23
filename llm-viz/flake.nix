@@ -1,20 +1,20 @@
 {
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
-    nixpkgs-2023-08.url = github:NixOS/nixpkgs/release-23.05;
+    nixpkgs-old.url = github:NixOS/nixpkgs/release-23.11;
     flake-utils.url = github:numtide/flake-utils;
   };
 
-  outputs = { self, nixpkgs, nixpkgs-2023-08, flake-utils }:
+  outputs = { self, nixpkgs, nixpkgs-old, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
     with nixpkgs.legacyPackages.${system};
     let
       scripts = {};
-      old = nixpkgs-2023-08.legacyPackages;
+      old = nixpkgs-old.legacyPackages;
     in {
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
-          old.x86_64-darwin.odin
+          old.${system}.odin
 
 #           ((odin.override {
 #             llvmPackages = llvmPackages_17;
