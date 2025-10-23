@@ -15,7 +15,7 @@
           (odin.overrideAttrs (attrs: {
             version = "dev-2023-08";
             src = attrs.src.override {
-              hash = "";
+              hash = "sha256-pmgrauhB5/JWBkwrAm7tCml9IYQhXyGXsNVDKTntA0M=";
             };
           }))
           yarn
