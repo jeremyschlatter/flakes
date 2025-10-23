@@ -13,7 +13,7 @@
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
           ((odin.override {
-            llvmPackages = llvmPackages_18;
+            llvmPackages = llvmPackages_17;
           }).overrideAttrs (attrs: {
             version = "dev-2023-08";
             src = attrs.src.override {
