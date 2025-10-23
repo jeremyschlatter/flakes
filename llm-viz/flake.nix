@@ -14,8 +14,8 @@
     in {
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
-          # old.x86_64-darwin.odin
-          old.${system}.odin
+          old.x86_64-darwin.odin
+          # old.${system}.odin
 
 #           ((odin.override {
 #             llvmPackages = llvmPackages_17;
