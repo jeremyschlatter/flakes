@@ -10,11 +10,11 @@
     with nixpkgs.legacyPackages.${system};
     let
       scripts = {};
-      old = nixpkgs-2023-08.legacyPackages.${system};
+      old = nixpkgs-2023-08.legacyPackages;
     in {
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
-          old.odin
+          old.x86_64-darwin.odin
 
 #           ((odin.override {
 #             llvmPackages = llvmPackages_17;
