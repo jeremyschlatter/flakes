@@ -12,6 +12,7 @@
     in {
       devShell = mkShellNoCC {
         packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
+          odin
           yarn
         ];
       };
