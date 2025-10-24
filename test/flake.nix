@@ -5,6 +5,7 @@
     {
       devShell = mkShellNoCC {
         packages = [
+          cowsay
         ];
       };
     });
