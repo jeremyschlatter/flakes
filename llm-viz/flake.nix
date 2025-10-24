@@ -1,15 +1,12 @@
 {
-  inputs.nixpkgs-old.url = github:NixOS/nixpkgs/38e5815;
+  inputs = {
+    nixpkgs.url = github:NixOS/nixpkgs/38e5815;
+    mkShell.url = github:jeremyschlatter/mkShell;
+  };
 
-  outputs = { self, nixpkgs, nixpkgs-old, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-    with nixpkgs.legacyPackages.${system};
-    {
-      devShell = mkShellNoCC {
-        packages = [
-          nixpkgs-old.legacyPackages.${system}.odin
-          yarn
-        ];
-      };
-    });
+  outputs = { self, nixpkgs, mkShell }:
+    mkShell nixpkgs (pkgs: with pkgs; [
+      odin
+      yarn
+    ]);
 }
