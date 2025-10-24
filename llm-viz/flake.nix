@@ -6,7 +6,7 @@
   };
 
   outputs = { self, nixpkgs, nixpkgs-old, mkShell }:
-    mkShell.withSystem nixpkgs (pkgs: system: with pkgs; [
+    mkShell nixpkgs (pkgs: system: with pkgs; [
       nixpkgs-old.legacyPackages.${system}.odin
       yarn
     ]);
