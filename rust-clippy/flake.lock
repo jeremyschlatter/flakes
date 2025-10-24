@@ -23,16 +23,17 @@
         "flake-utils": "flake-utils"
       },
       "locked": {
-        "lastModified": 1753483126,
-        "narHash": "sha256-jj6HzEEmwo8w+fi15KCrimqO7qF8fRU9qLEzaZQpXhY=",
+        "lastModified": 1761281975,
+        "narHash": "sha256-H+D8wyhPPuB5rYIRtJ87XyZjOt4d8tAKgC/gXq54rI8=",
         "owner": "jeremyschlatter",
         "repo": "mkShell",
-        "rev": "c24dbba34ef4c6d0b67476506b6a5960df139513",
+        "rev": "bc8b345e8918e2aab9c687084f4edc3894aa7893",
         "type": "github"
       },
       "original": {
-        "id": "mkShell",
-        "type": "indirect"
+        "owner": "jeremyschlatter",
+        "repo": "mkShell",
+        "type": "github"
       }
     },
     "nixpkgs": {
