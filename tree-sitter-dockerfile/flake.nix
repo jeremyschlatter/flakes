@@ -1,9 +1,7 @@
 {
   outputs =
     { mkShell, nixpkgs, ... }:
-    mkShell nixpkgs (pkgs: {
-      packages = with pkgs; [
-        tree-sitter
-      ];
-    });
+    mkShell nixpkgs (pkgs: with pkgs; [
+      tree-sitter
+    ]);
 }

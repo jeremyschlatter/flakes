@@ -1,20 +1,12 @@
 {
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
-    flake-utils.url = github:numtide/flake-utils;
+    mkShell.url = github:jeremyschlatter/mkShell;
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-    with nixpkgs.legacyPackages.${system};
-    let
-      scripts = {};
-    in {
-      devShell = mkShellNoCC {
-        packages = lib.attrsets.mapAttrsToList writeShellScriptBin scripts ++ [
-          uv
-        ];
-      };
-    });
+  outputs = { self, nixpkgs, mkShell }:
+    mkShell.noCC nixpkgs (pkgs: with pkgs; [
+      uv
+    ]);
 }
 

@@ -18,6 +18,24 @@
         "type": "github"
       }
     },
+    "mkShell": {
+      "inputs": {
+        "flake-utils": "flake-utils"
+      },
+      "locked": {
+        "lastModified": 1761283706,
+        "narHash": "sha256-1iNKltfDHJl2c5IneOSTnRqXoHUzE6paNHN/ruwZD+w=",
+        "owner": "jeremyschlatter",
+        "repo": "mkShell",
+        "rev": "9ba9e66f755de60e21019f541e4217cdbcfec462",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jeremyschlatter",
+        "repo": "mkShell",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1757967192,
@@ -36,7 +54,7 @@
     },
     "root": {
       "inputs": {
-        "flake-utils": "flake-utils",
+        "mkShell": "mkShell",
         "nixpkgs": "nixpkgs"
       }
     },

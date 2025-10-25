@@ -23,11 +23,11 @@
         "flake-utils": "flake-utils"
       },
       "locked": {
-        "lastModified": 1753483126,
-        "narHash": "sha256-jj6HzEEmwo8w+fi15KCrimqO7qF8fRU9qLEzaZQpXhY=",
+        "lastModified": 1761283706,
+        "narHash": "sha256-1iNKltfDHJl2c5IneOSTnRqXoHUzE6paNHN/ruwZD+w=",
         "owner": "jeremyschlatter",
         "repo": "mkShell",
-        "rev": "c24dbba34ef4c6d0b67476506b6a5960df139513",
+        "rev": "9ba9e66f755de60e21019f541e4217cdbcfec462",
         "type": "github"
       },
       "original": {
