@@ -1,6 +1,4 @@
-My nix flakes repo.
-
-I use this repo to manage dependencies for third-party code that I want to build from source.
+Dependency management for random third-party codebases I have happened to want to build from source.
 
 # How I use this
 
