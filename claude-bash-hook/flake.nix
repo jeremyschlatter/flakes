@@ -7,6 +7,7 @@
   outputs = { self, nixpkgs, mkShell }:
     mkShell.noCC nixpkgs (pkgs: with pkgs; [
       cargo
+      rustfmt
     ]);
 }
 
